@@ -1,0 +1,52 @@
+\hypertarget{classDame}{}\section{Référence de la classe Dame}
+\label{classDame}\index{Dame@{Dame}}
+
+
+Graphe d\textquotesingle{}héritage de Dame\+:
+% FIG 0
+
+
+Graphe de collaboration de Dame\+:
+% FIG 1
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDame_ad4f00673b0a287a0ddf92682221fc961}\label{classDame_ad4f00673b0a287a0ddf92682221fc961}} 
+{\bfseries Dame} (Couleur name, string color, \hyperlink{classSquare}{Square} position)
+\item 
+Ret\+Code \hyperlink{classDame_a035c96c1763d0d111a4b4cde9678e75f}{est\+\_\+mouvement\+\_\+legal} (\hyperlink{classSquare}{Square} new\+Square, \hyperlink{classEchiquier}{Echiquier} \&echiquier)
+\begin{DoxyCompactList}\small\item\em Cette fonction vérifie la légalité d\textquotesingle{}un mouvement de la dame. Elle appelle les fonctions horizontale, verticale et diagonale qui vérifie le mouvement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classDame_a035c96c1763d0d111a4b4cde9678e75f}\label{classDame_a035c96c1763d0d111a4b4cde9678e75f}} 
+\index{Dame@{Dame}!est\+\_\+mouvement\+\_\+legal@{est\+\_\+mouvement\+\_\+legal}}
+\index{est\+\_\+mouvement\+\_\+legal@{est\+\_\+mouvement\+\_\+legal}!Dame@{Dame}}
+\subsubsection{\texorpdfstring{est\+\_\+mouvement\+\_\+legal()}{est\_mouvement\_legal()}}
+{\footnotesize\ttfamily Ret\+Code Dame\+::est\+\_\+mouvement\+\_\+legal (\begin{DoxyParamCaption}\item[{\hyperlink{classSquare}{Square}}]{new\+Square,  }\item[{\hyperlink{classEchiquier}{Echiquier} \&}]{echiquier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cette fonction vérifie la légalité d\textquotesingle{}un mouvement de la dame. Elle appelle les fonctions horizontale, verticale et diagonale qui vérifie le mouvement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em new\+Square} & est la case sur laquelle la dame veut se déplacer \\
+\hline
+{\em echiquier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+O\+K\+\_\+\+S\+ET si le mouvement est légal et une erreur appropriée sinon \+: Les erreurs sont \+: E\+R\+R\+\_\+\+I\+L\+L\+M\+O\+VE si le mouvement est illégale E\+R\+R\+\_\+\+O\+N\+\_\+\+W\+AY si une pièce est sur le chemin 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{classPiece_a7003f6b90284237191f00bb6038a3bd3}{Piece}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Dame.\+h\item 
+Dame.\+cpp\end{DoxyCompactItemize}

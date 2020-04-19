@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>/home/bastien/git/Echec: Référence de la classe Echiquier</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">/home/bastien/git/Echec
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="classEchiquier-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe Echiquier</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a1d265e55a73ab57f3a208bac01c59ebd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPiece.html">Piece</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEchiquier.html#a1d265e55a73ab57f3a208bac01c59ebd">getPiece</a> (int abs, int ord) const</td></tr>
+<tr class="memdesc:a1d265e55a73ab57f3a208bac01c59ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction retourne la pièce demandée en argument. C'est à la fonction appelante de s'assurer que la pièce demandée est hors-jeu. Sinon, le programme est quitté (comportement non souhaité).  <a href="#a1d265e55a73ab57f3a208bac01c59ebd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1d265e55a73ab57f3a208bac01c59ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22265120d527dfb2fa91187c4ce01cf"><td class="memItemLeft" align="right" valign="top"><a id="af22265120d527dfb2fa91187c4ce01cf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>affiche</b> () const</td></tr>
+<tr class="separator:af22265120d527dfb2fa91187c4ce01cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea383ab5acef9fb01881f8fd6b84055"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEchiquier.html#a2ea383ab5acef9fb01881f8fd6b84055">deplace</a> (string coup)</td></tr>
+<tr class="memdesc:a2ea383ab5acef9fb01881f8fd6b84055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction deplace une pièce selon le mouvement donné. Pour cela, la case d'arrivée pointe sur la case de départ et la case de départ sur NULL.  <a href="#a2ea383ab5acef9fb01881f8fd6b84055">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2ea383ab5acef9fb01881f8fd6b84055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad453eba7d2462c3ded58ce755d38e673"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEchiquier.html#ad453eba7d2462c3ded58ce755d38e673">est_en_echec</a> ()</td></tr>
+<tr class="memdesc:ad453eba7d2462c3ded58ce755d38e673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction vérifie si un roi est en echec. Pour cela, elle simule une attaque de tous les joueurs adverses sur chaque roi.  <a href="#ad453eba7d2462c3ded58ce755d38e673">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad453eba7d2462c3ded58ce755d38e673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e63670c6b3fc2ff52dc5a007b20611f"><td class="memItemLeft" align="right" valign="top">RetCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEchiquier.html#a0e63670c6b3fc2ff52dc5a007b20611f">affiche_mouvement_legal</a> (string coup)</td></tr>
+<tr class="separator:a0e63670c6b3fc2ff52dc5a007b20611f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a0e63670c6b3fc2ff52dc5a007b20611f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e63670c6b3fc2ff52dc5a007b20611f">&#9670;&nbsp;</a></span>affiche_mouvement_legal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RetCode Echiquier::affiche_mouvement_legal </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>mouvement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Cette fonction récupère le code de retour de la méthode est_mouvement_legal afin d'afficher une erreur appropriée.</p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coup</td><td>est une chaine de type "a1a2". C'est le mouvement entré par l'utilisateur. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Elle retourne OK_SET si le mouvement est légal et un code de retour appropprié sinon. Le code de retour est forcément un des cas du switch. </dd></dl>
+
+</div>
+</div>
+<a id="a2ea383ab5acef9fb01881f8fd6b84055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea383ab5acef9fb01881f8fd6b84055">&#9670;&nbsp;</a></span>deplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Echiquier::deplace </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>mouvement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction deplace une pièce selon le mouvement donné. Pour cela, la case d'arrivée pointe sur la case de départ et la case de départ sur NULL. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mouvement</td><td>de type "a1a2". C'est à la fonction appelante de s'assurer que le mouvement n'est pas hors-jeu.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true </dd></dl>
+
+</div>
+</div>
+<a id="ad453eba7d2462c3ded58ce755d38e673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad453eba7d2462c3ded58ce755d38e673">&#9670;&nbsp;</a></span>est_en_echec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Echiquier::est_en_echec </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction vérifie si un roi est en echec. Pour cela, elle simule une attaque de tous les joueurs adverses sur chaque roi. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si un roi est en echec et false sinon </dd></dl>
+
+</div>
+</div>
+<a id="a1d265e55a73ab57f3a208bac01c59ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d265e55a73ab57f3a208bac01c59ebd">&#9670;&nbsp;</a></span>getPiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPiece.html">Piece</a> * Echiquier::getPiece </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>abs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ord</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction retourne la pièce demandée en argument. C'est à la fonction appelante de s'assurer que la pièce demandée est hors-jeu. Sinon, le programme est quitté (comportement non souhaité). </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">abs</td><td></td></tr>
+    <tr><td class="paramname">ord</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>La pièce de coordonnées (abs, ord) si elle existe et quitte le jeu avec un EXIT_FAILURE si une erreur est arrivée. </dd></dl>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li><a class="el" href="Echiquier_8h_source.html">Echiquier.h</a></li>
+<li>Echiquier.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,156 @@
+\hypertarget{classPiece}{}\section{Référence de la classe Piece}
+\label{classPiece}\index{Piece@{Piece}}
+
+
+Graphe d\textquotesingle{}héritage de Piece\+:
+% FIG 0
+
+
+Graphe de collaboration de Piece\+:
+% FIG 1
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPiece_a3d47a1a20d4c7f6d5713d0a04e7f7a49}\label{classPiece_a3d47a1a20d4c7f6d5713d0a04e7f7a49}} 
+{\bfseries Piece} (Couleur color, string name, \hyperlink{classSquare}{Square} position)
+\item 
+\mbox{\Hypertarget{classPiece_ae486e285af4485a418601ec982e496fb}\label{classPiece_ae486e285af4485a418601ec982e496fb}} 
+void const {\bfseries affiche} ()
+\item 
+\mbox{\Hypertarget{classPiece_a9a913c322dbd817d69549602c5839a55}\label{classPiece_a9a913c322dbd817d69549602c5839a55}} 
+string {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{classPiece_a3c662c72321c3459e4c8581801829e54}\label{classPiece_a3c662c72321c3459e4c8581801829e54}} 
+Couleur {\bfseries get\+Color} () const
+\item 
+\mbox{\Hypertarget{classPiece_a410a562af1832a4c7483118e78252ab0}\label{classPiece_a410a562af1832a4c7483118e78252ab0}} 
+\hyperlink{classSquare}{Square} {\bfseries get\+Position} () const
+\item 
+\mbox{\Hypertarget{classPiece_a6f55b91769d8b01aa5a9a720af5d7bf7}\label{classPiece_a6f55b91769d8b01aa5a9a720af5d7bf7}} 
+void {\bfseries change} (int abs, int ord)
+\item 
+virtual Ret\+Code \hyperlink{classPiece_a7003f6b90284237191f00bb6038a3bd3}{est\+\_\+mouvement\+\_\+legal} (\hyperlink{classSquare}{Square} new\+Square, \hyperlink{classEchiquier}{Echiquier} \&echiquier)
+\begin{DoxyCompactList}\small\item\em Cette fonction fait quelques vérifications d\textquotesingle{}ordre générale. \end{DoxyCompactList}\item 
+Ret\+Code \hyperlink{classPiece_abe8171dbb3c0f454d1d70b501e525daa}{diagonale} (\hyperlink{classSquare}{Square} new\+Square, int old\+Abs, int old\+Ord, \hyperlink{classEchiquier}{Echiquier} \&echiquier)
+\begin{DoxyCompactList}\small\item\em Vérifie la légalité d\textquotesingle{}un mouvement entre deux pièces situés sur une diagonale. C\textquotesingle{}est à la fonction appelante de s\textquotesingle{}assurer que les deux pièces sont bien sur une diagonale. \end{DoxyCompactList}\item 
+Ret\+Code \hyperlink{classPiece_a5f13c0a4cc2694f4e14117d9b48a9ca4}{horizontale} (\hyperlink{classSquare}{Square} new\+Square, int old\+Abs, int old\+Ord, \hyperlink{classEchiquier}{Echiquier} \&echiquier)
+\begin{DoxyCompactList}\small\item\em Vérifie la légalité d\textquotesingle{}un mouvement entre deux pièces situés sur une ligne. C\textquotesingle{}est à la fonction appelante de s\textquotesingle{}assurer que les deux pièces sont bien sur une ligne. \end{DoxyCompactList}\item 
+Ret\+Code \hyperlink{classPiece_a34205209a19b563a9cb808a0c9eed3d1}{verticale} (\hyperlink{classSquare}{Square} new\+Square, int old\+Abs, int old\+Ord, \hyperlink{classEchiquier}{Echiquier} \&echiquier)
+\begin{DoxyCompactList}\small\item\em Vérifie la légalité d\textquotesingle{}un mouvement entre deux pièces situés sur une vertivale. C\textquotesingle{}est à la fonction appelante de s\textquotesingle{}assurer que les deux pièces sont bien sur une verticale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPiece_aa8a0e5930abd970ee64db7dd3d03bc6d}\label{classPiece_aa8a0e5930abd970ee64db7dd3d03bc6d}} 
+Couleur const {\bfseries color\+\_\+}
+\item 
+\mbox{\Hypertarget{classPiece_ada2240a0c823038fc73e37df8475ab72}\label{classPiece_ada2240a0c823038fc73e37df8475ab72}} 
+string const {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classPiece_afb4c531962f6dc79903e831c165a3955}\label{classPiece_afb4c531962f6dc79903e831c165a3955}} 
+\hyperlink{classSquare}{Square} {\bfseries position\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classPiece_abe8171dbb3c0f454d1d70b501e525daa}\label{classPiece_abe8171dbb3c0f454d1d70b501e525daa}} 
+\index{Piece@{Piece}!diagonale@{diagonale}}
+\index{diagonale@{diagonale}!Piece@{Piece}}
+\subsubsection{\texorpdfstring{diagonale()}{diagonale()}}
+{\footnotesize\ttfamily Ret\+Code Piece\+::diagonale (\begin{DoxyParamCaption}\item[{\hyperlink{classSquare}{Square}}]{new\+Square,  }\item[{int}]{old\+Abs,  }\item[{int}]{old\+Ord,  }\item[{\hyperlink{classEchiquier}{Echiquier} \&}]{echiquier }\end{DoxyParamCaption})}
+
+
+
+Vérifie la légalité d\textquotesingle{}un mouvement entre deux pièces situés sur une diagonale. C\textquotesingle{}est à la fonction appelante de s\textquotesingle{}assurer que les deux pièces sont bien sur une diagonale. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em new\+Square} & est la pièce de destination \\
+\hline
+{\em old\+Abs} & \\
+\hline
+{\em old\+Ord} & \\
+\hline
+{\em echiquier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+O\+K\+\_\+\+S\+ET si le mouvement est légal, E\+R\+R\+\_\+\+O\+N\+\_\+\+W\+AY si une pièce est entre la pièce d\textquotesingle{}origine et celle de destination et E\+R\+R\+\_\+\+U\+N\+K\+N\+O\+WN s\textquotesingle{}il est survenu une erreur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiece_a7003f6b90284237191f00bb6038a3bd3}\label{classPiece_a7003f6b90284237191f00bb6038a3bd3}} 
+\index{Piece@{Piece}!est\+\_\+mouvement\+\_\+legal@{est\+\_\+mouvement\+\_\+legal}}
+\index{est\+\_\+mouvement\+\_\+legal@{est\+\_\+mouvement\+\_\+legal}!Piece@{Piece}}
+\subsubsection{\texorpdfstring{est\+\_\+mouvement\+\_\+legal()}{est\_mouvement\_legal()}}
+{\footnotesize\ttfamily Ret\+Code Piece\+::est\+\_\+mouvement\+\_\+legal (\begin{DoxyParamCaption}\item[{\hyperlink{classSquare}{Square}}]{new\+Square,  }\item[{\hyperlink{classEchiquier}{Echiquier} \&}]{echiquier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cette fonction fait quelques vérifications d\textquotesingle{}ordre générale. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em new\+Square} & la case de destination. \\
+\hline
+{\em echiquier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+O\+K\+\_\+\+S\+ET si le ùouvement est légal et E\+R\+R\+\_\+\+S\+A\+M\+E\+\_\+\+C\+O\+L\+OR si le pièce d\textquotesingle{}origine est de la même couleur que la pièce de destination. 
+\end{DoxyReturn}
+
+
+Réimplémentée dans \hyperlink{classCavalier_a6ed7d1f1410e9b03842ce56bb7a41c12}{Cavalier}, \hyperlink{classPion_aa7c1043d5491beec7aa809902a08c6b6}{Pion}, \hyperlink{classRoi_abba3adc6d75ad23c0a1293ffcd4741ee}{Roi}, \hyperlink{classTour_a13fb6cfb9c1ebc615b2e0b373d1d37c0}{Tour}, \hyperlink{classDame_a035c96c1763d0d111a4b4cde9678e75f}{Dame}, et \hyperlink{classFou_a5b1e65e01d3172846e0e28e8ac50c03d}{Fou}.
+
+\mbox{\Hypertarget{classPiece_a5f13c0a4cc2694f4e14117d9b48a9ca4}\label{classPiece_a5f13c0a4cc2694f4e14117d9b48a9ca4}} 
+\index{Piece@{Piece}!horizontale@{horizontale}}
+\index{horizontale@{horizontale}!Piece@{Piece}}
+\subsubsection{\texorpdfstring{horizontale()}{horizontale()}}
+{\footnotesize\ttfamily Ret\+Code Piece\+::horizontale (\begin{DoxyParamCaption}\item[{\hyperlink{classSquare}{Square}}]{new\+Square,  }\item[{int}]{old\+Abs,  }\item[{int}]{old\+Ord,  }\item[{\hyperlink{classEchiquier}{Echiquier} \&}]{echiquier }\end{DoxyParamCaption})}
+
+
+
+Vérifie la légalité d\textquotesingle{}un mouvement entre deux pièces situés sur une ligne. C\textquotesingle{}est à la fonction appelante de s\textquotesingle{}assurer que les deux pièces sont bien sur une ligne. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em new\+Square} & est la pièce de destination \\
+\hline
+{\em old\+Abs} & \\
+\hline
+{\em old\+Ord} & \\
+\hline
+{\em echiquier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+O\+K\+\_\+\+S\+ET si le mouvement est légal, E\+R\+R\+\_\+\+O\+N\+\_\+\+W\+AY si une pièce est entre la pièce d\textquotesingle{}origine et celle de destination et E\+R\+R\+\_\+\+U\+N\+K\+N\+O\+WN s\textquotesingle{}il est survenu une erreur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPiece_a34205209a19b563a9cb808a0c9eed3d1}\label{classPiece_a34205209a19b563a9cb808a0c9eed3d1}} 
+\index{Piece@{Piece}!verticale@{verticale}}
+\index{verticale@{verticale}!Piece@{Piece}}
+\subsubsection{\texorpdfstring{verticale()}{verticale()}}
+{\footnotesize\ttfamily Ret\+Code Piece\+::verticale (\begin{DoxyParamCaption}\item[{\hyperlink{classSquare}{Square}}]{new\+Square,  }\item[{int}]{old\+Abs,  }\item[{int}]{old\+Ord,  }\item[{\hyperlink{classEchiquier}{Echiquier} \&}]{echiquier }\end{DoxyParamCaption})}
+
+
+
+Vérifie la légalité d\textquotesingle{}un mouvement entre deux pièces situés sur une vertivale. C\textquotesingle{}est à la fonction appelante de s\textquotesingle{}assurer que les deux pièces sont bien sur une verticale. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em new\+Square} & est la pièce de destination \\
+\hline
+{\em old\+Abs} & \\
+\hline
+{\em old\+Ord} & \\
+\hline
+{\em echiquier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+O\+K\+\_\+\+S\+ET si le mouvement est légal, E\+R\+R\+\_\+\+O\+N\+\_\+\+W\+AY si une pièce est entre la pièce d\textquotesingle{}origine et celle de destination et E\+R\+R\+\_\+\+U\+N\+K\+N\+O\+WN s\textquotesingle{}il est survenu une erreur. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Piece.\+h\item 
+Piece.\+cpp\end{DoxyCompactItemize}

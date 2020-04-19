@@ -1,0 +1,52 @@
+\hypertarget{classTour}{}\section{Référence de la classe Tour}
+\label{classTour}\index{Tour@{Tour}}
+
+
+Graphe d\textquotesingle{}héritage de Tour\+:
+% FIG 0
+
+
+Graphe de collaboration de Tour\+:
+% FIG 1
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTour_a2b2ceb2ed986348f20de0dbdc246e0fc}\label{classTour_a2b2ceb2ed986348f20de0dbdc246e0fc}} 
+{\bfseries Tour} (Couleur name, string color, \hyperlink{classSquare}{Square} position)
+\item 
+Ret\+Code \hyperlink{classTour_a13fb6cfb9c1ebc615b2e0b373d1d37c0}{est\+\_\+mouvement\+\_\+legal} (\hyperlink{classSquare}{Square} new\+Square, \hyperlink{classEchiquier}{Echiquier} \&echiquier)
+\begin{DoxyCompactList}\small\item\em Cette fonction vérifie la légalité d\textquotesingle{}un mouvement de la dame. Elle appelle les fonctions horizontale et verticale qui vérifient le mouvement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classTour_a13fb6cfb9c1ebc615b2e0b373d1d37c0}\label{classTour_a13fb6cfb9c1ebc615b2e0b373d1d37c0}} 
+\index{Tour@{Tour}!est\+\_\+mouvement\+\_\+legal@{est\+\_\+mouvement\+\_\+legal}}
+\index{est\+\_\+mouvement\+\_\+legal@{est\+\_\+mouvement\+\_\+legal}!Tour@{Tour}}
+\subsubsection{\texorpdfstring{est\+\_\+mouvement\+\_\+legal()}{est\_mouvement\_legal()}}
+{\footnotesize\ttfamily Ret\+Code Tour\+::est\+\_\+mouvement\+\_\+legal (\begin{DoxyParamCaption}\item[{\hyperlink{classSquare}{Square}}]{new\+Square,  }\item[{\hyperlink{classEchiquier}{Echiquier} \&}]{echiquier }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Cette fonction vérifie la légalité d\textquotesingle{}un mouvement de la dame. Elle appelle les fonctions horizontale et verticale qui vérifient le mouvement. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em new\+Square} & est la case sur laquelle la tour veut se déplacer \\
+\hline
+{\em echiquier} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+O\+K\+\_\+\+S\+ET si le mouvement est légal et une des erreurs suivantes sinon \+: E\+R\+R\+\_\+\+I\+L\+L\+M\+O\+VE si le mouvement est illégale E\+R\+R\+\_\+\+O\+N\+\_\+\+W\+AY si une pièce est sur le chemin 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{classPiece_a7003f6b90284237191f00bb6038a3bd3}{Piece}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Tour.\+h\item 
+Tour.\+cpp\end{DoxyCompactItemize}
