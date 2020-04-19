@@ -18,8 +18,7 @@ Cavalier::Cavalier(Couleur name, string color, Square position)
 }
 
 /**
- * @brief 
- * Cette fonction vérifie si le mouvement du cavalier est légal
+ * @brief Cette fonction vérifie si le mouvement du cavalier est légal
  * 
  * @param newSquare case sur la laquelle l'utilsateur souhaite déplacer son 
  * cavalier
