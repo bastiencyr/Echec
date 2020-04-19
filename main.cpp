@@ -20,7 +20,7 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 	
-	Jeu monjeu;  // initialise le jeu
+	Jeu monjeu;  // initialise le jeu jeu
     string mouvement;
     bool stop(true);
     monjeu.affiche();
@@ -46,7 +46,8 @@ int main(int argc, char** argv) {
 		
         else {
 			
-			//verfie si la case de départ n'est pas vide
+			//verfie si la case de départ n'est pas vide et affiche une erreur
+			//si la case de départ est vide
 			if (monjeu.estcasevide(mouvement)!=true){
 				newCouleur = monjeu.donneCouleur(mouvement);
 				
@@ -55,9 +56,11 @@ int main(int argc, char** argv) {
 						monjeu.getEchiquier().affiche_mouvement_legal(mouvement)==OK_SET){
 					
 					monjeu.deplace(mouvement);
+					
 					monjeu.affiche();
 					monjeu.getEchiquier().est_en_echec();
 					monjeu.changeCouleur();
+					
 				}
 			}
 		}
