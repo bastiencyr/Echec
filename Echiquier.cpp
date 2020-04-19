@@ -217,7 +217,7 @@ RetCode Echiquier::est_en_echec(){
 			}
 		}
 	
-	return ERR_UNKNOWN;
+	return NO_ECHEC;
 	
 }
 
