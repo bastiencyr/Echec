@@ -24,6 +24,9 @@ typedef enum {
             ERR_SAME_COLOR,     // mange une pièce de son propre camp
             ERR_UNKNOWN,        // erreur inconnu
             
+            ECHEC_BLANC,        //Le roi blanc est en échec
+            ECHEC_NOIR,         //Le roi noir est en échec
+            
 } RetCode;
 
 #endif /* ERREUR_H */
