@@ -19,6 +19,18 @@ Dame::Dame(Couleur name, string color, Square position)
 : Piece(name, color, position) {
 }
 
+/**
+ * @brief Cette fonction vérifie la légalité d'un mouvement de la dame. Elle
+ * appelle les fonctions horizontale, verticale et diagonale qui vérifie
+ * le mouvement.
+ *  
+ * @param newSquare est la case sur laquelle la dame veut se déplacer
+ * @param echiquier
+ * @return OK_SET si le mouvement est légal et une erreur appropriée sinon :
+ * Les erreurs sont :
+ * ERR_ILLMOVE si le mouvement est illégale
+ * ERR_ON_WAY si une pièce est sur le chemin
+ */
 
 RetCode Dame::est_mouvement_legal(Square newSquare, Echiquier &echiquier){
 	

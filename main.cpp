@@ -49,14 +49,14 @@ int main(int argc, char** argv) {
 			//verfie si la case de départ n'est pas vide et affiche une erreur
 			//si la case de départ est vide
 			if (monjeu.estcasevide(mouvement)!=true){
+				//newCouleur est la couleur de la nouvelle pièce
 				newCouleur = monjeu.donneCouleur(mouvement);
 				
 				//vérifie si c'est bien le tour du joueur
 				if (monjeu.est_mon_tour(newCouleur)==true && 
 						monjeu.getEchiquier().affiche_mouvement_legal(mouvement)==OK_SET){
 					
-					monjeu.deplace(mouvement);
-					
+					monjeu.deplace(mouvement);				
 					monjeu.affiche();
 					monjeu.getEchiquier().est_en_echec();
 					monjeu.changeCouleur();

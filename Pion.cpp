@@ -18,7 +18,15 @@ using namespace std;
 Pion::Pion(Couleur name, string color, Square position)
 : Piece(name, color, position), first_move(true) {
 }
-
+/**
+ * @brief Cette fonction vérifie la légalité d'un mouvement du pion. 
+ * 
+ * @param newSquare est la case sur laquelle le pion veut se déplacer.
+ * @param echiquier
+ * @return OK_SET si le mouvement est légal et une des erreurs suivantes sinon :
+ * ERR_ILLMOVE si le mouvement est illégale
+ * 
+ */
 RetCode Pion::est_mouvement_legal(Square newSquare, Echiquier &echiquier){
 	
 	Square oldSquare = (*this).getPosition();

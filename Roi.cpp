@@ -13,7 +13,13 @@
 #include "Piece.h"
 #include "erreur.h"
 using namespace std;
-
+/**
+ * @brief 
+ * 
+ * @param name
+ * @param color
+ * @param position
+ */
 Roi::Roi(Couleur name, string color, Square position)
 : Piece(name, color, position) {
 }

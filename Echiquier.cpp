@@ -55,20 +55,19 @@ Echiquier::Echiquier() {
 		echiquier[j][6]=new Pion(Noir, " \u265F ", Square(j,6));
 		
 	}
-	
-	//roi_b.change(4,0);
-	//roi_n.change(4,7);
 }
 
 /**
- * @brief C'est à la fonction appelante de s'assurer que la pièce demandée
- * existe. 
+ * @brief Cette fonction retourne la pièce demandée en argument. 
+ * C'est à la fonction appelante de s'assurer que la pièce demandée est 
+ * hors-jeu. Sinon, le programme est quitté (comportement non souhaité).
  * 
- * @param abs
+ * @param abs 
  * @param ord
- * @return La pièce de coordonnées (abs, ord) si elle existe, EXIT_FAILURE 
- * si une erreur est arrivée.
+ * @return La pièce de coordonnées (abs, ord) si elle existe et quitte le jeu
+ * avec un EXIT_FAILURE si une erreur est arrivée. 
  */
+
 Piece* Echiquier::getPiece(int abs, int ord) const {
 	if (abs>=8 or abs <0 or ord >=8 or ord <0){
 		cout << "Tentative d'accès à une pièce hors-jeu"<<endl;
@@ -78,11 +77,14 @@ Piece* Echiquier::getPiece(int abs, int ord) const {
 }
 
 /**
+ * @brie Cette fonction récupère le code de retour de la 
+ * méthode est_mouvement_legal afin d'afficher une erreur appropriée.  
  * 
- * @param coup est une chaine de type a1a2, cette fonction vérifie la 
- * légalité de ce mouvement sans déplacer les pièces. Elle affiche également 
- * les erreurs.
- * @return 
+ * @param coup est une chaine de type "a1a2". C'est le mouvement entré 
+ * par l'utilisateur.
+ * @return Elle retourne OK_SET si le mouvement est légal et un code de 
+ * retour appropprié sinon. Le code de retour est forcément un des cas 
+ * du switch.
  */
 
 RetCode Echiquier::affiche_mouvement_legal(string mouvement){
@@ -133,6 +135,16 @@ RetCode Echiquier::affiche_mouvement_legal(string mouvement){
 	return ret;
 }
 
+/**
+ * @brief Cette fonction deplace une pièce selon le mouvement donné. Pour cela,
+ * la case d'arrivée pointe sur la case de départ et la case de 
+ * départ sur NULL.
+ * 
+ * @param mouvement de type "a1a2". C'est à la fonction appelante de s'assurer
+ * que le mouvement n'est pas hors-jeu.
+ * 
+ * @return true
+ */
 bool Echiquier::deplace(string mouvement){
 	
 	string oldS = mouvement.substr(0, 2), newS = mouvement.substr(2, 4);
@@ -148,6 +160,13 @@ bool Echiquier::deplace(string mouvement){
 	return true;	
 }
 
+/**
+ * @brief Cette fonction vérifie si un roi est en echec. Pour cela, elle simule
+ * une attaque de tous les joueurs adverses sur chaque roi. 
+ * 
+ * @return true si un roi est en echec et false sinon
+ *  
+ */
 
 bool Echiquier::est_en_echec(){
 	
