@@ -27,7 +27,7 @@ public:
     Piece * getPiece (int abs, int ord) const;
     void affiche () const;
     bool deplace(string coup);
-    bool est_en_echec();
+    RetCode est_en_echec();
     RetCode affiche_mouvement_legal(string coup);
     
 private:
