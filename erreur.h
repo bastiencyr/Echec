@@ -26,7 +26,8 @@ typedef enum {
             
             ECHEC_BLANC,        //Le roi blanc est en échec
             ECHEC_NOIR,         //Le roi noir est en échec
-            ROI_MORT            //Un des rois est mort
+            NO_ECHEC,           //Aucun roi n'est en échec
+            ROI_MORT,           //Un des rois est mort
             
 } RetCode;
 
