@@ -164,11 +164,16 @@ bool Echiquier::deplace(string mouvement){
  * @brief Cette fonction vérifie si un roi est en echec. Pour cela, elle simule
  * une attaque de tous les joueurs adverses sur chaque roi. 
  * 
- * @return true si un roi est en echec et false sinon
+ * @return 
+ * ROI_MORT si le roi a été mangé.
+ * ECHEC_BLANC si le roi blanc est en échec
+ * ECHEC_NOIR si le roi noir est en échec
+ * ERR_UNKNOWN si une erreur inconnue est survenue. C'est alors à la fonction 
+ * appelante de mettre fin au jeu.
  *  
  */
 
-bool Echiquier::est_en_echec(){
+RetCode Echiquier::est_en_echec(){
 	
 	int abs_roi_n=-1, ord_roi_n=-1;
 	int abs_roi_b=-1, ord_roi_b=-1;
@@ -190,7 +195,7 @@ bool Echiquier::est_en_echec(){
 	
 	if (abs_roi_n==-1 or abs_roi_b==-1 ){
 		cout << "Le roi est mort ce soir"<<endl;
-		return true;
+		return ROI_MORT;
 	}
 	
 	for(int k=0 ; k<8; k++)
@@ -200,7 +205,7 @@ bool Echiquier::est_en_echec(){
 					&& echiquier[k][l]->
 					est_mouvement_legal(echiquier[abs_roi_b][ord_roi_b]->getPosition(), *this)==OK_SET){
 				cout << "Le roi blanc est en échec " << endl;
-				return true;
+				return ECHEC_BLANC;
 			}
 			
 			if (echiquier[k][l]!=NULL 
@@ -208,11 +213,11 @@ bool Echiquier::est_en_echec(){
 					&& echiquier[k][l]->
 					est_mouvement_legal(echiquier[abs_roi_n][ord_roi_n]->getPosition(), *this)==OK_SET){
 				cout << "Le roi Noir est en échec" << endl;
-				return true;
+				return ECHEC_NOIR;
 			}
 		}
 	
-	return false;
+	return ERR_UNKNOWN;
 	
 }
 
