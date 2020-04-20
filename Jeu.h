@@ -27,6 +27,7 @@ public:
     void deplace(string &mouvement);
     Jeu(const Jeu& orig);
     string reverseMouvement(string &mouvement);
+    bool afficheJeuEtEchec(string &mouvement, Couleur &newCouleur);
     //virtual ~Jeu();
 private:
     Echiquier echiquier_;
