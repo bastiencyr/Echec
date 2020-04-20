@@ -25,6 +25,11 @@ using namespace std;
 
 Echiquier::Echiquier() {
 	
+	//Square r("a1");
+	
+	//roi_b = r;
+	//roi_n = r;
+	
 	for(int i=0; i<8; i++){
 		for(int j=0; j<8; j++){
 			echiquier[i][j] = NULL; 
@@ -153,6 +158,12 @@ bool Echiquier::deplace(string mouvement){
 	int oldAbs=oldSquare.getAbs(), oldOrd=oldSquare.getOrd();
 	int newAbs=newSquare.getAbs(), newOrd=newSquare.getOrd();
 	
+	//if (oldAbs == roi_b.getAbs() && oldOrd == roi_b.getOrd())
+	//	roi_b.change(newAbs, newOrd);
+	
+	//if (oldAbs == roi_n.getAbs() && oldOrd == roi_n.getOrd())
+	//	roi_n.change(newAbs, newOrd);
+	
 	echiquier[newAbs][newOrd]=echiquier[oldAbs][oldOrd];
 	echiquier[newAbs][newOrd]->change(newAbs, newOrd);
 	echiquier[oldAbs][oldOrd]=NULL;
@@ -193,27 +204,20 @@ RetCode Echiquier::est_en_echec(){
 			}
 		}
 	
-	if (abs_roi_n==-1 or abs_roi_b==-1 ){
-		cout << "Le roi est mort ce soir"<<endl;
+	if (abs_roi_n==-1 or abs_roi_b==-1 )
 		return ROI_MORT;
-	}
 	
 	for(int k=0 ; k<8; k++)
 		for (int l=0; l<8 ; l++){
-			if (echiquier[k][l]!=NULL 
-					&& echiquier[k][l]->getColor()==Noir 
-					&& echiquier[k][l]->
-					est_mouvement_legal(echiquier[abs_roi_b][ord_roi_b]->getPosition(), *this)==OK_SET){
-				cout << "Le roi blanc est en échec " << endl;
-				return ECHEC_BLANC;
-			}
 			
-			if (echiquier[k][l]!=NULL 
-					&& echiquier[k][l]->getColor()==Blanc
-					&& echiquier[k][l]->
-					est_mouvement_legal(echiquier[abs_roi_n][ord_roi_n]->getPosition(), *this)==OK_SET){
-				cout << "Le roi Noir est en échec" << endl;
-				return ECHEC_NOIR;
+			if (echiquier[k][l]!=NULL){
+				
+				Square p = echiquier[abs_roi_b][ord_roi_b]->getPosition();
+				Couleur col = echiquier[k][l]->getColor() ;
+				
+				if (echiquier[k][l]-> Piece::est_mouvement_legal(p, *this)==OK_SET
+						&& echiquier[k][l]-> est_mouvement_legal(p, *this)==OK_SET)
+					return (col==Noir) ? ECHEC_BLANC : ECHEC_NOIR;
 			}
 		}
 	
@@ -258,3 +262,24 @@ void Echiquier::affiche () const{
 	 free (echiquier[7][0]);
  }
  */
+
+	/*
+	for(int k=0 ; k<8; k++)
+		for (int l=0; l<8 ; l++){
+			if (echiquier[k][l]!=NULL 
+					&& echiquier[k][l]->getColor()==Noir 
+					&& echiquier[k][l]->
+					est_mouvement_legal(echiquier[abs_roi_b][ord_roi_b]->getPosition(), *this)==OK_SET){
+				cout << "Le roi blanc est en échec " << endl;
+				return ECHEC_BLANC;
+			}
+			
+			if (echiquier[k][l]!=NULL 
+					&& echiquier[k][l]->getColor()==Blanc
+					&& echiquier[k][l]->
+					est_mouvement_legal(echiquier[abs_roi_n][ord_roi_n]->getPosition(), *this)==OK_SET){
+				cout << "Le roi Noir est en échec" << endl;
+				return ECHEC_NOIR;
+			}
+		}
+	*/
