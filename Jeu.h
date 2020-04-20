@@ -26,6 +26,7 @@ public:
     RetCode estcasevide(string & mouvement);
     void deplace(string &mouvement);
     Jeu(const Jeu& orig);
+    string reverseMouvement(string &mouvement){
     //virtual ~Jeu();
 private:
     Echiquier echiquier_;
