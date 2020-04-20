@@ -56,10 +56,18 @@ int main(int argc, char** argv) {
 				if (monjeu.est_mon_tour(newCouleur)==true && 
 						monjeu.getEchiquier().affiche_mouvement_legal(mouvement)==OK_SET){
 					
-					monjeu.deplace(mouvement);				
-					monjeu.affiche();
-					monjeu.getEchiquier().est_en_echec();
-					monjeu.changeCouleur();
+					monjeu.deplace(mouvement);	
+					
+					if(monjeu.getEchiquier().est_en_echec()==NO_ECHEC){
+						monjeu.affiche();
+						monjeu.changeCouleur();
+					}
+					
+					if(monjeu.getEchiquier().est_en_echec()==ECHEC_BLANC &&
+							newCouleur==Blanc){
+						monjeu.deplace(monjeu.reverse(mouvement));
+						cout << "Les blancs se mettent en échec" <<endl;
+					}
 					
 				}
 			}
