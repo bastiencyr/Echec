@@ -88,6 +88,58 @@ string Jeu::reverseMouvement(string &mouvement){
 	return mouvement.substr(2, 4)+ mouvement.substr(0, 2);
 }
 
+bool Jeu::afficheJeuEtEchec(string &mouvement, Couleur &newCouleur){
+	
+	string reverse =  mouvement.substr(2, 4)+ mouvement.substr(0, 2);
+	
+	switch (echiquier_.est_en_echec()){
+		
+		case ROI_MORT :
+			cout << "Un roi est mort" << endl;
+			return false;	
+			break;
+		
+		case NO_ECHEC :
+			(*this).affiche();
+			(*this).changeCouleur();
+			return true;
+			break;
+			
+		case ECHEC_BLANC :
+			if (newCouleur == Noir){
+				(*this).affiche();
+				cout << "Le roi blanc est en échec" << endl;
+				(*this).changeCouleur();
+				return true;
+			}
+			//les blancs se sont mis en échec, il faut annuler le coup
+			(*this).deplace(reverse);
+			cout << "Les blancs se mettent en échec" <<endl;
+			return true;
+			break;
+			
+		case ECHEC_NOIR :
+			
+			if (newCouleur == Blanc){
+				(*this).affiche();
+				(*this).changeCouleur();
+				cout << "Le roi noir est en échec" << endl;
+				return true;
+			}
+			//les noirs se sont mis en échec, il faut annuler le coup
+			(*this).deplace(reverse);
+			cout << "Les Noirs se mettent en échec" <<endl;
+			return true;	
+			break;
+			
+		default :
+			cout << "Une erreur inconnue est survenue" << endl;
+			return false;
+	}
+	
+	return false;
+}
+
 /*
 Jeu::Jeu(const Jeu& orig) {
 }
