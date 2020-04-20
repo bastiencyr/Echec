@@ -45,31 +45,17 @@ int main(int argc, char** argv) {
 			stop = false;
 		
         else {
-			
-			//verfie si la case de départ n'est pas vide et affiche une erreur
-			//si la case de départ est vide
+			//verfie si la case de départ n'est pas vide
 			if (monjeu.estcasevide(mouvement)!=true){
 				//newCouleur est la couleur de la nouvelle pièce
 				newCouleur = monjeu.donneCouleur(mouvement);
-				
-				//vérifie si c'est bien le tour du joueur
+	
 				if (monjeu.est_mon_tour(newCouleur)==true && 
 						monjeu.getEchiquier().affiche_mouvement_legal(mouvement)==OK_SET){
 					
-					monjeu.deplace(mouvement);	
-					
-					if(monjeu.getEchiquier().est_en_echec()==NO_ECHEC){
-						monjeu.affiche();
-						monjeu.changeCouleur();
-					}
-					
-					if(monjeu.getEchiquier().est_en_echec()==ECHEC_BLANC &&
-							newCouleur==Blanc){
-						string reverse = monjeu.reverseMouvement(mouvement);
-						monjeu.deplace(reverse);
-						cout << "Les blancs se mettent en échec" <<endl;
-					}
-					
+					monjeu.deplace(mouvement);
+					//affiche le jeu si pas de mise en échec, un message sinon
+					stop = monjeu.afficheJeuEtEchec(mouvement, newCouleur);
 				}
 			}
 		}
