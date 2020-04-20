@@ -179,7 +179,7 @@ RetCode Piece::diagonale(Square newSquare, int oldAbs, int oldOrd, Echiquier &ec
  *  
  * @param newSquare la case de destination.
  * @param echiquier
- * @return OK_SET si le ùouvement est légal et ERR_SAME_COLOR si le pièce 
+ * @return OK_SET si le mouvement est légal et ERR_SAME_COLOR si le pièce 
  * d'origine est de la même couleur que la pièce de destination.
  */
 
