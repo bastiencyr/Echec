@@ -84,6 +84,10 @@ void Jeu::deplace(string &mouvement){
 	echiquier_.deplace(mouvement);
 }
 
+string Jeu::reverseMouvement(string &mouvement){
+	return mouvement.substr(2, 4)+ mouvement.substr(0, 2);
+}
+
 /*
 Jeu::Jeu(const Jeu& orig) {
 }
