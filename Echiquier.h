@@ -34,7 +34,6 @@ private:
     Piece * echiquier[8][8];
     //Square roi_b;
     //Square roi_n;
-    
 };
 
 #endif /* ECHIQUIER_H */
