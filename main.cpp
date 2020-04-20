@@ -65,7 +65,8 @@ int main(int argc, char** argv) {
 					
 					if(monjeu.getEchiquier().est_en_echec()==ECHEC_BLANC &&
 							newCouleur==Blanc){
-						monjeu.deplace(monjeu.reverse(mouvement));
+						string reverse = monjeu.reverseMouvement(mouvement);
+						monjeu.deplace(reverse);
 						cout << "Les blancs se mettent en échec" <<endl;
 					}
 					
