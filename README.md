@@ -1,13 +1,30 @@
-# Echec
+# Introduction
 
-Ce projet permet de créer un jeu d'échec virtuel entre deux personnes. Il suffit de télecharger l'éecutable "echecs", de lancer un terminal dans le même dossier que l'éxécutable et d'entrer "./echecs". 
+Ce projet permet de créer un jeu d'échec virtuel pour deux joueurs.
 
-L'exécutable est dans dist/Debug/GNU-Linux mais le projet peut être recompilé entièrement avec le makefile. Le makefile contient les règles suivante :
-  -par défaut construit les fichiers objets et l'exécutable
-  -clean pour supprimer tout les fichiers objets
+# Compilation et execution
 
-Les fonctionnalités suivantes ne sont pas supportées :
-  -le roque
-  -la prise en passant du pion 
-  
-Pour quitter le jeu proprement, entrez "/quit". 
+1. Se placer dans le répertoire principal
+2. ouvrir un terminal dans ce dossier
+3. Entrez "make" pour compiler le code
+4. Puis entrez "./echecs/dist/Debug/GNU-Linux/echec"
+
+Pour quitter le jeu, tapez "/quit".
+
+Les fonctionnalités suivantes ne sont pas supportées : 
+
+* le roque
+* la prise en passant du pion 
+
+# Description du code :
+
+## Structure du code
+
+Le code comporte les classes principales suivantes : 
+
+* Jeu.cpp
+* Echiquier.cpp
+* Piece.cpp
+* Square.cpp
+
+Piece.cpp contient d'autres classes héritées qui sont les pièces du jeu telles que roi.cpp, fou.cpp...
